@@ -1,0 +1,301 @@
+html {
+    scroll-behavior: smooth;
+    font-family: 'Comfortaa', cursive;
+    z-index: 1;
+  }
+
+* {
+    margin: 0em;
+    padding: 0em;
+    box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.header {
+  width: 100%;
+  background-color: #008000;
+  align-items: center;
+  padding-top: 5em;
+}
+
+.together{
+  width: 100%;
+	display: flex;
+  justify-content: center;
+  background-color: #008000;
+}
+
+.logo{
+  height: 110px;
+  display: flex;
+  padding-right: 2em;
+  margin-top: 0.5em;
+}
+.name {
+  float: right;
+}
+.name h1{
+  vertical-align: middle;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 6em;
+}
+.name p{
+  vertical-align: middle;
+  text-align: center;
+  color: #FFFFFF;
+}
+.wave1{
+  width: 100%;
+}
+.menu {
+  font-size: 1.4em;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  align-items: center;
+  justify-content: space-around;
+}
+.wave2{
+  z-index: -1 !important;
+  width: 100%;
+  margin-bottom: -1px;
+}
+.groups{
+  color: #008000;
+  text-align: center;
+}
+
+.group{
+  color: #008000;
+  text-align: center;
+  margin-top: 2em;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  background-color: #008000;
+  margin-top: -20px;
+  color:#FFFFFF;
+}
+
+.info h2{
+  padding-top: 0.8em;
+  text-align: center;
+}
+.info p{
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  max-width: 17em;
+}
+
+.footer {
+  height: auto;
+  background-color: #008000;
+  color:#FFFFFF;
+  margin-top: -5px;
+}
+
+.footer h2{
+  margin-left: 2.5em;
+  padding: 0.4em;
+}
+.footer ul{
+  margin-left: 7em;
+  padding: 0.2em;
+}
+
+.footer a{
+  color:#FFFFFF;
+  text-decoration: none;
+}
+
+.copyright{
+  text-align: center;
+  padding-bottom: 0.3em;
+}
+
+.copyright a{
+  text-decoration: none;
+  color: #FDD017;
+  cursor: pointer;
+}
+.copyright a:hover{
+  color: #58BCCD;
+}
+
+.AuthWrapper {
+	width: 100%;
+	
+	display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+	text-align: center;
+}
+
+.DecideWrapper, .TimeWrapper {
+	
+	display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+.TimeWrapper input{
+  border-color: #008000;
+  height: 2.5em;
+  width: 7em;
+  border-radius: 20px;
+  margin-top: 1.5em;
+  text-align: left;
+  padding-left: 8px;
+  color: #008000;
+  font-family: 'Comfortaa', cursive;
+  outline: none;
+}
+
+::placeholder {
+  color: rgba(0, 128, 0, 0.67);
+}
+
+.DecideWrapper h2, .TimeWrapper h2{
+  color: #008000;
+}
+
+.DecideWrapper p, .TimeWrapper p{
+  color: #008000;
+  margin-top: 0.2em;
+}
+
+.button{
+  background-color: #008000;
+  color: #FFFFFF;
+  font-family: 'Comfortaa', cursive;
+  height: 2.5em;
+  width: 7em;
+  border-radius: 20px;
+  border: none;
+  margin-top: 1.5em;
+  outline: none;
+  cursor: pointer;
+}
+
+.button-white{
+  background-color:#FFFFFF ;
+  color: #008000;
+  font-family: 'Comfortaa', cursive;
+  height: 2.5em;
+  width: 7em;
+  border-radius: 20px;
+  border: none;
+  margin-top: 2.5em;
+  margin-bottom: 3.5em;
+  outline: none;
+  cursor: pointer;
+}
+
+button:disabled{
+  background-color: #FF0000;
+  color: #FFFFFF;
+}
+
+.wider{
+  width: 10em;
+}
+
+.button:hover, .button-white:hover {
+  background-color: #FDD017;
+  color: #008000;
+}
+
+
+#JoinContainer input, #CreateContainer input, #CreateGroupZone{
+  border-color: #008000;
+  height: 2.5em;
+  width: 20em;
+  border-radius: 20px;
+  margin-top: 1.5em;
+  text-align: left;
+  padding-left: 8px;
+  color: #008000;
+  font-family: 'Comfortaa', cursive;
+  outline: none;
+}
+
+/*Submenu-Container*/
+.Container {
+  z-index: 2;
+
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  color: white;
+  background-color: #008000;
+  border: 3px solid white;
+  border-radius: 0.25em;
+
+  white-space: normal;
+  text-align: center;
+  font-size: 2em;
+
+  padding: 1em 1em 1em 1em; 
+}
+
+.Container-White {
+  z-index: 2;
+
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  color: #008000;
+  background-color: white;
+  border: 3px solid #008000;
+  border-radius: 0.25em;
+
+  white-space: normal;
+  text-align: center;
+  font-size: 2em;
+
+  padding: 1em 1em 1em 1em; 
+}
+
+.RestaurantVoting{
+  color: #008000;
+  text-align: center;
+  justify-content: center;
+  margin-top: 4em;
+}
+
+.RestaurantVoting input{
+  border-color: #008000;
+  height: 2.5em;
+  width: 20em;
+  border-radius: 20px;
+  margin-top: 1.5em;
+  text-align: left;
+  padding-left: 8px;
+  color: #008000;
+  font-family: 'Comfortaa', cursive;
+  outline: none;
+}
+
+::placeholder {
+  color: rgba(0, 128, 0, 0.67);
+}
+
+.titles{
+  margin-top: 3em;
+  min-height: 8em;
+  border-color: #008000;
+  width: 600px;
+}
+

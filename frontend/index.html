@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html class = "noselect" lang = "en">
+	<head>
+		<meta charset = "UTF-8" />
+		<meta name = "viewport" content = "width=device-width, initial-scale=1.0" />
+		<meta http-equiv = "X-UA-Compatible" content = "ie=edge" />
+		
+		<title>Foodie</title>
+		
+		<!--Link functionality-->
+		<script src = "js/home.js"></script>
+		<script src = "js/event.js"></script>
+
+		<link rel = "stylesheet" href = "./style.css" />
+
+		<link rel = "preconnect" href = "https://fonts.gstatic.com">
+		<link href = "https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
+
+		<!--Link favicon-->
+		<link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+		<link rel="manifest" href="favicon/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+	</head>
+	<body>
+	
+		<div class = "header">
+			<div class = "together">
+				<img class = "logo" src = "Logo3.svg" alt = "Logo">
+				<div class = "name">
+					<h1>Foodie</h1>
+					<p>... when you don't know who's ordering today</p>
+				</div>
+			</div>
+		</div>
+		
+		<img class = "wave1" src="wave-haikei1.svg" alt="wave">
+		
+		<div class = "menu">
+			<a href = "#about">About</a>
+			<a href = "#logovlna">Log In</a>
+			<a href = "#contact">Contact</a>
+		</div>
+
+		<img class = "wave2" src = "wave-haikei2.svg" alt="wave">
+
+		<div class = "about" id = "about">
+			<div class = "inline">
+				<div class = "center">
+					<h2>1. Register</h2>
+					<p>Join to our community and use our website to plan to meal ordering for you and your group!</p>
+				</div>
+				<img style = "height: 15em;" src = "Register.svg" alt="Register Image">
+			</div>
+
+			<div class = "inline">
+				<img style="height: 15em;" src = "Join a group.svg" alt="Join a group Image">
+				<div class = "center">
+					<h2>2. Create or join a group</h2>
+					<p>Tell your friends to register here, create a group and have fun together with the planning!</p>
+				</div>	
+			</div>
+
+			<div class = "inline">
+				<div class = "center">
+					<h2>3. The system will choose someone</h2>
+					<p>System will choose someone, who will be ordering. But it's choice is not final, because you aren't working or sometimes you just don't want to order.</p>
+				</div>
+				<img style="height: 15em;" src = "System.svg" alt="System Image">
+			</div>
+
+			<div class = "inline">
+				<img style = "height: 15em;" src = "Choose a time.svg" alt="Choose a time Image">
+				<div class = "center">
+					<h2>4. Choose the time for eat</h2>
+					<p>Choose time when you want or can eat and the system will take it into account.</p>
+				</div>	
+			</div>
+
+			<div class = "inline">
+				<div class = "center">
+					<h2>5. Add your favourite restaurant</h2>
+					<p>Choose your favourite restaurants and when you'll have luck, the system will choose it or you will try something new :D</p>
+				</div>
+				<img style = "height: 15em;" src = "Choose a restaurant.svg" alt="Choose a restaurant Image">
+			</div>
+
+			<div class = "inline">
+				<img style = "height: 15em;" src = "Enjoy.svg" alt="Enjoy Image">
+				<div class = "center">
+					<h2>6. Enjoy</h2>
+					<p>We are happy, that you decided to use our website and we hope, that you'll like it!</p>
+				</div>
+			</div>	
+		</div>
+
+
+		<img id = "logovlna" class="wave2" src="wave-haikei3.svg" alt="wave">
+
+		<div class = "AuthWrapper">
+			<div class = "LoginWrapper">
+				<h2>Log In</h2>
+				<p>Welcome back!</p>
+
+				<p id = "LogStatus"></p>
+				<input id = "LogEmail" type = "text" placeholder = "Email"/> 
+				<input id = "LogPassword" type = "password" placeholder = "Password"/> 
+
+				<button id = "LogInButton">Log In</button><br>
+				<div class = "inline">
+					<input id = "AutoLogIn" type = "checkbox" style = "width: auto; height: auto; margin-top: 0px; margin-right: 1em;"/>Remember me
+				</div>
+			</div>
+
+			<div class = "RegisterWrapper">
+				<h2>Register</h2>
+				<p>Join to our community!</p>
+				<p id = "RegStatus"></p>
+				<input id = "RegFullName" type = "text" placeholder = "Full Name"/> 
+				<input id = "RegEmail" type = "text" placeholder = "Email"/> 
+				<input id = "RegPassword" type = "password" placeholder = "Password"/> 
+
+				<button id = "RegisterButton">Register</button>
+			</div>
+
+		</div>	
+	
+		<img class = "wave2" src="wave-haikei4.svg" alt="wave">
+		
+		<div class = "footer" id = "contact">
+			<h2>Contact:</h2>
+			<ul>Mail: <a href = "mailto:matejkozub124@gmail.com">Matej Kozub</a></ul>
+			<ul>IG: <a href = "https://www.instagram.com/_0x77314c6f_/">Viliam Geffert</a></ul>
+			<ul>FB: <a href = "https://www.facebook.com/profile.php?id=100013843965646">Richard Gerboc</a></ul>
+			<p class = "copyright">Copyright © 2021 Never Gonna Give You Up HK & use <a href="https://temp.kotol.cloud/">Tempcloud</a></p>
+		</div>
+	</body>
+</html>

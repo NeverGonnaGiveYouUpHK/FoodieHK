@@ -1,0 +1,29 @@
+{
+  "name": "foodie",
+  "version": "1.0.0",
+  "description": "",
+  "main": "backend.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NeverGonnaGiveYouUpHK/Foodie.git"
+  },
+  "author": "Kotol, Gerbera, W1lo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NeverGonnaGiveYouUpHK/Foodie/issues"
+  },
+  "homepage": "https://github.com/NeverGonnaGiveYouUpHK/Foodie#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-static": "^1.2.6",
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.18.1",
+    "set-interval-async": "^2.0.1",
+    "ws": "^7.4.4"
+  }
+}

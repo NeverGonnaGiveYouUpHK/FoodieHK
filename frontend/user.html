@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html class = "noselect" lang = "en">
+	<head>
+		<meta charset = "UTF-8" />
+		<meta name = "viewport" content = "width=device-width, initial-scale=1.0" />
+		<meta http-equiv = "X-UA-Compatible" content = "ie=edge" />
+		
+		<title>Foodie</title>
+
+		<!--Link functionality-->
+		<script src = "js/user.js"></script>
+		<script src = "js/home.js"></script>
+
+		<!--Link network-->
+		<script src = "js/network.js"></script>
+		
+		<link rel = "stylesheet" href = "./userStyle.css" />
+
+		<link rel = "preconnect" href = "https://fonts.gstatic.com">
+		<link href = "https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
+
+			<!--Link favicon-->
+			<link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+			<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+			<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+			<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+			<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+			<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+			<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+			<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+			<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+			<link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+			<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+			<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+			<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+			<link rel="manifest" href="favicon/manifest.json">
+			<meta name="msapplication-TileColor" content="#ffffff">
+			<meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+			<meta name="theme-color" content="#ffffff">
+	</head>
+	<body>
+	
+		<div class = "header">
+			<div class = "together">
+				<img class = "logo" src = "Logo3.svg" alt = "Logo">
+				<div class = "name">
+					<h1 id = "UsersName">Your name</h1>
+					<p>... knows who's ordering today</p>
+				</div>
+			</div>
+		</div>
+		<img class = "wave1" src="wave-haikei1.svg" alt="wave">
+
+		<div class = "menu">
+			
+			<div class = "groups">
+				<h2>My groups:</h2>
+				<div id = "GroupWrapper">
+				</div>
+			</div>
+			<div class = "AuthWrapper">
+				<button class = "button wider" id = "GroupJoinButton">Join Group</button>
+				<button class = "button wider" id = "GetInviteCodeButton">Get Invite Code</button>
+				<button class = "button wider" id = "LeaveGroupButton">Leave The Group</button>
+				<button class = "button wider" id = "GroupMakeButton">Create Group</button>
+			</div>
+			<div class = "group">
+				<h2>Selected group:</h2>
+				<p id = "SelectedGroupInfo">None, now.</p>
+			</div>
+		</div>
+
+		<div id = "GroupContentWrapper" style = "display:  none;">
+			<img class = "wave2" src = "wave-haikei2.svg" alt="wave">
+
+			<div class = "info" id = "info">
+				<h2>Will you have lunch today?</h2>
+				<div class = "AuthWrapper">
+					<button class = "button-white" id = "LunchButtonYes">Yes</button>
+					<button class = "button-white" id = "LunchButtonNo">No</button>
+				</div>
+				<div class = "AuthWrapper">
+					<div class = "WhoWrapper">
+						<h2>Today is ordering:</h2>
+						<p id = "OrderUser">Someone</p>
+					</div>
+					<div class = "WhenWrapper">
+						<h2>Today you'll eat at:</h2>    
+						<p id = "OrderTime">Some time in the future</p>
+					</div>
+				</div>
+
+				<div class = "AuthWrapper">
+					<div class = "WhoWrapper">
+						<h2>Today, the restaurant is:</h2>
+						<p id = "OrderRestaurant">We don't know yet. Still deciding though...</p>
+					</div>
+					<div class = "WhenWrapper">
+						<h2>Today, number of eating is:</h2>    
+						<p id = "OrderCount">Some time in the future</p>
+					</div>
+				</div>
+			</div>
+
+
+			<img id = "logovlna" class="wave2" src="wave-haikei3.svg" alt="wave">
+
+			<div class = "AuthWrapper">
+				<div class = "DecideWrapper">
+					<h2>Do you want to order today?</h2>
+
+					<button class = "button" id = "DecideButtonYes">Yes</button>
+					<button class = "button" id = "DecideButtonNo">No</button>
+				</div>
+
+				<div class = "TimeWrapper">
+					<h2>When do you want to eat today?</h2>
+					<p style="margin-bottom: 0.5em;">Use 24 hour format</p>
+					<p>From:</p>
+					<div class = "AuthWrapper">
+						<input id = "RegFromHour" type = "text" placeholder = "HOURS"/> 
+						<input id = "RegFromMinutes" type = "text" placeholder = "MINUTES"/>
+					</div>
+
+					<p>To:</p>
+					<div class = "AuthWrapper">
+						<input id = "RegToHour" type = "text" placeholder = "HOURS"/> 
+						<input id = "RegToMinutes" type = "text" placeholder = "MINUTES"/>
+					</div>
+
+					<button id="SetTime" class = "button">Set time</button>
+				</div>
+				
+			</div>	
+			<div class = "RestaurantVoting">
+		</div>
+		<div class = "RestaurantVoting">
+				<h2>Vote for your restaurant:</h2>
+				<input id = "RestaurantVote" type = "text" placeholder = "RESTAURANTS"/>
+				<button class = "button" id = "RestaurantVoteButton">Submit</button>
+
+				<div id="Restaurants">
+					<h2 id="restaurantsTitle" class="titles">Voted restaurants</h2>
+				</div>
+		</div>
+			<div class = "RestaurantVoting" id = "LockTable" style = "display: none;">
+				<h2>You're ordering! Make your final decision.</h2>
+				<input id = "FromWhere" type = "text" placeholder = "Restaurant"/>
+				<input id = "When" type = "text" placeholder = "Time"/>
+				<button class = "button" id = "RestaurantVoteButton">Submit</button>
+			</div>
+
+		<img class = "wave2" src="wave-haikei4.svg" alt="wave">
+		
+
+
+		<!--Error popup-->
+		<div class = "Popups">
+			<div id = "ErrorContainer" class = "Container" style = "display: none;">
+				<p>Connection to THE SERVER lost :( Reconnecting...</p>
+			</div>
+
+			<div id = "InviteContainer" class = "Container" style = "display: none;">
+				<p id = "InvText">Select a group first!</p>
+				<button class = "button-white" id = "CloseInviteButton" style = "margin-bottom: 0px;">Got It!</button>
+			</div>
+			
+			<div id = "JoinContainer" class = "Container-White" style = "display: none;">
+				<p>Here, place the invite code from your friend.</p>
+				<input id = "JoinCode" type = "text" placeholder = "Code"/><br>
+				<button class = "button" id = "JoinButton" style = "margin-bottom: 0px;">Join</button>
+				<button class = "button" id = "JoinCloseButton" style = "margin-bottom: 0px;">Close</button>
+			</div>
+
+			<div id = "CreateContainer" class = "Container-White" style = "display: none;">
+				<p>Choose a nice and peaceful name for your group.</p>
+				<input id = "CreateGroupName" type = "text" placeholder = "Nice and peaceful name"/>
+				
+				<select id = "CreateGroupZone">
+
+					<option value = "-720">GMT -12</option>
+					<option value = "-660">GMT -11</option>
+					<option value = "-600">GMT -10</option>	
+					<option value = "-570">GMT -9:30</option>
+					<option value = "-540">GMT -9</option>
+					<option value = "-480">GMT -8</option>
+					<option value = "-420">GMT -7</option>
+					<option value = "-360">GMT -6</option>
+					<option value = "-300">GMT -5</option>
+					<option value = "-240">GMT -4</option>
+					<option value = "-210">GMT -3:30</option>
+					<option value = "-180">GMT -3</option>
+					<option value = "-120">GMT -2</option>
+					<option value = "-60">GMT -1</option>
+					<option value = "0">GMT ±0</option>
+					<option value = "60">GMT +1</option>
+					<option value = "120">GMT +2</option>	
+					<option value = "180">GMT +3</option>
+					<option value = "210">GMT +3:30</option>
+					<option value = "240">GMT +4</option>
+					<option value = "270">GMT +4:30</option>
+					<option value = "300">GMT +5</option>
+					<option value = "330">GMT +5:30</option>
+					<option value = "345">GMT +5:45</option>
+					<option value = "360">GMT +6</option>
+					<option value = "390">GMT +6:30</option>
+					<option value = "420">GMT +7</option>
+					<option value = "480">GMT +8</option>
+					<option value = "525">GMT +8:45</option>
+					<option value = "540">GMT +9</option>
+					<option value = "570">GMT +9:30</option>
+					<option value = "600">GMT +10</option>
+					<option value = "630">GMT +10:30</option>
+					<option value = "660">GMT +11</option>
+					<option value = "720">GMT +12</option>
+					<option value = "765">GMT +12:45</option>
+					<option value = "780">GMT +13</option>
+					<option value = "840">GMT +14</option>
+
+				</select><br>
+
+				<button class = "button" id = "CreateButton" style = "margin-bottom: 0px;">Create</button>
+				<button class = "button" id = "CreateCloseButton" style = "margin-bottom: 0px;">Close</button>
+			</div>
+
+
+			<div id = "LeaveContainer" class = "Container" style = "display: none;">
+				<p id = "LeaveMessage">You can't really leave, if you aren't in a group...</p>
+				<button class = "button-white" id = "LeaveYes" style = "margin-bottom: 0px;" disabled>Yes</button>
+				<button class = "button-white" id = "LeaveNo" style = "margin-bottom: 0px;" disabled>No</button>
+			</div>
+	</body>		
+
+	<footer>
+		<div class = "footer" id = "contact">
+			<h2>Contact:</h2>
+			<ul>Mail: <a href = "mailto:matejkozub124@gmail.com">Matej Kozub</a></ul>
+			<ul>IG: <a href = "https://www.instagram.com/_0x77314c6f_/">Viliam Geffert</a></ul>
+			<ul>FB: <a href = "https://www.facebook.com/profile.php?id=100013843965646">Richard Gerboc</a></ul>
+			<p class = "copyright">Copyright © 2021 Never Gonna Give You Up HK & use <a href="https://temp.kotol.cloud/">Tempcloud</a></p>
+		</div>
+	</footer>
+</html>
